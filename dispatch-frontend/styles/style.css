@@ -1,3 +1,238 @@
+html,
+body,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
 
+a,
+li {
+  color: inherit !important;
+  text-decoration: none !important;
+  list-style-type: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "roboto500";
+  src: url("../assets/fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "roboto700";
+  src: url("../assets/fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "roboto300";
+  src: url("../assets/fonts/roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "raleway700";
+  src: url("../assets/fonts/raleway/static/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: "roboto400";
+  src: url("../assets/fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "raleway500";
+  src: url("../assets/fonts/raleway/static/Raleway-Medium.ttf");
+}
+.roboto400 {
+  font-family: "roboto400";
+}
+
+.roboto300 {
+  font-family: "roboto300";
+}
+
+.roboto500 {
+  font-family: "roboto500";
+}
+
+.roboto700 {
+  font-family: "roboto700";
+}
+
+.raleway700 {
+  font-family: "raleway700";
+}
+
+.raleway500 {
+  font-family: "raleway500";
+}
+
+.background-palegrey {
+  background: #f8f8f8;
+}
+
+.background-paleblue {
+  background: #f8fdff;
+}
+
+.red {
+  color: #f25c63;
+}
+
+.black {
+  color: #030f1a;
+}
+
+.blue {
+  color: #0085ff;
+}
+
+.white {
+  color: white;
+}
+
+.violet {
+  color: #7d17ff;
+}
+
+.background-violet {
+  background: #7d17ff;
+  transition: 0.3s;
+}
+
+.background-white {
+  background: white;
+}
+
+.background-transparent {
+  background: transparent;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.principal-navbar {
+  height: 100px;
+  font-size: 23px;
+  width: 100%;
+  z-index: 10;
+}
+.principal-navbar .bars-solid {
+  flex-direction: column;
+  cursor: pointer;
+  row-gap: 12px;
+  vertical-align: middle;
+  justify-content: center;
+}
+.principal-navbar .bars-solid div {
+  width: 60px;
+  height: 6px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.principal-navbar .bars-solid div:nth-child(1) {
+  animation: bar1RevAnim 0.3s ease-in-out forwards;
+}
+.principal-navbar .bars-solid div:nth-child(3) {
+  animation: bar3RevAnim 0.3s ease-in-out forwards;
+}
+.principal-navbar .bars-solid.active div:nth-child(2) {
+  transform: scale(0);
+}
+.principal-navbar .bars-solid.active div:nth-child(1) {
+  animation: bar1Anim 0.3s ease-in-out forwards;
+}
+.principal-navbar .bars-solid.active div:nth-child(3) {
+  animation: bar3Anim 0.3s ease-in-out forwards;
+}
+.principal-navbar .mobile-ul-style {
+  position: fixed;
+  top: 100px;
+  background-color: #7d17ff;
+  margin: 0;
+  left: -100%;
+  transition: all 0.3s;
+}
+.principal-navbar .mobile-ul-style.active {
+  left: 0;
+}
+
+/*animations*/
+@keyframes bar1Anim {
+  100% {
+    transform: translateY(24px) rotateZ(45deg);
+  }
+}
+@keyframes bar3Anim {
+  100% {
+    transform: translateY(-12px) rotateZ(135deg);
+  }
+}
+@keyframes bar1RevAnim {
+  0% {
+    transform: translateY(24px) rotateZ(45deg);
+  }
+  50% {
+    transform: translateY(12px) rotateZ(22deg);
+  }
+  100% {
+    transform: translateY(0) rotateZ(0);
+  }
+}
+@keyframes bar3RevAnim {
+  0% {
+    transform: translateY(-12px) rotateZ(135deg);
+  }
+  50% {
+    transform: translateY(-6px) rotateZ(67deg);
+  }
+  100% {
+    transform: translateY(0) rotateZ(0);
+  }
+}
+.home-header {
+  background: linear-gradient(to bottom left, #7d17ff, #64c9ff);
+  min-height: 400px;
+  padding: 300px 0 200px 0;
+  margin-top: -100px;
+  box-shadow: 0px 20px 30px 0px rgba(3, 15, 26, 0.2);
+  z-index: 5;
+  position: relative;
+}
+
+.thibault-presentation .presentation-paragraph {
+  padding-top: 35%;
+  line-height: 1.8rem;
+}
+.thibault-presentation .presentation-photo {
+  padding-top: 13%;
+}
+@media screen and (max-width: 768px) {
+  .thibault-presentation {
+    background: #f8fdff;
+  }
+  .thibault-presentation .presentation-paragraph {
+    padding-top: 5%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .thibault-presentation .presentation-paragraph {
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+    padding-top: 45%;
+  }
+}
+@media screen and (min-width: 2150px) {
+  .thibault-presentation .presentation-paragraph {
+    line-height: 4rem;
+    font-size: 2rem;
+    padding-top: 40%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

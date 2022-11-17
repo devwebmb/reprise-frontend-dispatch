@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1090" width="1920" height="1090">
+	<title>BG_Présentation-Thibault-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="-227.9" y1="665.8" x2="2302.7" y2="352.3" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#9e76fe"/>
+			<stop offset="1" stop-color="#fee140"/>
+		</linearGradient>
+		<linearGradient id="g2" x1="-316.4" y1="799.4" x2="2186.2" y2="310.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#0085ff"/>
+			<stop offset="1" stop-color="#fee140"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { opacity: .1;fill: url(#g1) } 
+		.s1 { opacity: .1;fill: url(#g2) } 
+	</style>
+	<path id="Layer" class="s0" d="m-276.2 276l2530.6-313.5 96.6 779.7-2530.6 313.5z"/>
+	<path id="Layer" class="s1" d="m-382.7 459.9l2502.5-489.3 132.8 679.1-2502.6 489.3z"/>
+</svg>

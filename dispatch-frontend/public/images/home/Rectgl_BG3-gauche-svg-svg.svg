@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 421" width="1300" height="421">
+	<title>Rectgl_BG3-gauche-svg-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="246.8" y1="-1158" x2="-283.6" y2="269" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#7d17ff"/>
+			<stop offset="1" stop-color="#0085ff"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+	</style>
+	<g id="Layer" style="opacity: .1">
+		<path id="Layer" class="s0" d="m-1062.6-902c-6.1-34.8 17.2-68 52-74.1l2576.3-450.5c34.8-6.1 67.9 17.2 74 52l213.3 1219.6c6.1 34.8-17.2 68-52 74.1l-2576.3 450.5c-34.8 6.1-68-17.2-74.1-52.1z"/>
+	</g>
+</svg>

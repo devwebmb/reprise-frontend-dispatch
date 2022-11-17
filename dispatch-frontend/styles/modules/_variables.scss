@@ -1,0 +1,137 @@
+//reset
+
+html,
+body,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+li {
+  color: inherit !important;
+  text-decoration: none !important;
+  list-style-type: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//fonts
+
+@font-face {
+  font-family: "roboto500";
+  src: url("../assets/fonts/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "roboto700";
+  src: url("../assets/fonts/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "roboto300";
+  src: url("../assets/fonts/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "raleway700";
+  src: url("../assets/fonts/raleway/static/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "roboto400";
+  src: url("../assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "raleway500";
+  src: url("../assets/fonts/raleway/static/Raleway-Medium.ttf");
+}
+
+.roboto400 {
+  font-family: "roboto400";
+}
+
+.roboto300 {
+  font-family: "roboto300";
+}
+
+.roboto500 {
+  font-family: "roboto500";
+}
+
+.roboto700 {
+  font-family: "roboto700";
+}
+
+.raleway700 {
+  font-family: "raleway700";
+}
+
+.raleway500 {
+  font-family: "raleway500";
+}
+//colors
+
+$white: white;
+$blue: #0085ff;
+$violet: #7d17ff;
+$black: #030f1a;
+$paleBlue: #f8fdff;
+$red: #f25c63;
+$paleGrey: #f8f8f8;
+
+.background-palegrey {
+  background: $paleGrey;
+}
+
+.background-paleblue {
+  background: $paleBlue;
+}
+
+.red {
+  color: $red;
+}
+
+.black {
+  color: $black;
+}
+
+.blue {
+  color: $blue;
+}
+
+.white {
+  color: $white;
+}
+
+.violet {
+  color: $violet;
+}
+
+.background-violet {
+  background: $violet;
+  transition: 0.3s;
+}
+
+.background-white {
+  background: $white;
+}
+
+.background-transparent {
+  background: transparent;
+  transition: 0.3s;
+}
+
+//général
+
+a {
+  text-decoration: none;
+}
+
+.cover {
+  object-fit: cover;
+}

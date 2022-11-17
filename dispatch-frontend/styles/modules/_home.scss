@@ -1,0 +1,42 @@
+.home-header {
+  background: linear-gradient(to bottom left, #7d17ff, #64c9ff);
+  min-height: 400px;
+  padding: 300px 0 200px 0;
+  margin-top: -100px;
+  box-shadow: 0px 20px 30px 0px rgba(3, 15, 26, $alpha: 0.2);
+  z-index: 5;
+  position: relative;
+
+}
+
+.thibault-presentation {
+  .presentation-paragraph {
+    padding-top: 35%;
+    line-height: 1.8rem;
+  }
+  .presentation-photo {
+    padding-top: 13%;
+  }
+
+  @media screen and (max-width: 768px) {
+    background: $paleBlue;
+
+    .presentation-paragraph {
+      padding-top: 5%;
+    }
+  }
+  @media screen and (min-width: 1150px) {
+    .presentation-paragraph {
+      line-height: 2.2rem;
+      font-size: 1.4rem;
+      padding-top: 45%;
+    }
+  }
+  @media screen and (min-width: 2150px) {
+    .presentation-paragraph {
+      line-height: 4rem;
+      font-size: 2rem;
+      padding-top: 40%;
+    }
+  }
+}
