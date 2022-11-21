@@ -41,6 +41,10 @@ li {
   font-family: "raleway500";
   src: url("../assets/fonts/raleway/static/Raleway-Medium.ttf");
 }
+@font-face {
+  font-family: "raleway600italic";
+  src: url("../assets/fonts/raleway/static/Raleway-SemiBoldItalic.ttf");
+}
 .roboto400 {
   font-family: "roboto400";
 }
@@ -65,12 +69,28 @@ li {
   font-family: "raleway500";
 }
 
+.raleway600italic {
+  font-family: "raleway600italic";
+}
+
+.background-yellow {
+  background: #ffc700;
+}
+
 .background-palegrey {
   background: #f8f8f8;
 }
 
 .background-paleblue {
   background: #f8fdff;
+}
+
+.dark-red {
+  color: #fe0102;
+}
+
+.blue-link {
+  color: #2400ff;
 }
 
 .red {
@@ -113,6 +133,10 @@ a {
 
 .cover {
   object-fit: cover;
+}
+
+.zindex5 {
+  z-index: 5;
 }
 
 .principal-navbar {
@@ -232,6 +256,35 @@ a {
     line-height: 4rem;
     font-size: 2rem;
     padding-top: 40%;
+  }
+}
+
+.connect-signup-login {
+  min-height: 100vh;
+}
+.connect-signup-login .connect-logo {
+  height: 100px;
+  background-color: transparent;
+  z-index: 10;
+  font-size: 23px;
+}
+.connect-signup-login .connect-nav {
+  height: 100px;
+  font-size: 23px;
+  background-color: transparent;
+  z-index: 10;
+}
+.connect-signup-login .form-part {
+  padding-bottom: 10vh;
+  background: linear-gradient(to bottom left, #98cdde, #3ca3ba);
+  box-shadow: 0px 20px 30px rgba(3, 15, 26, 0.2);
+}
+.connect-signup-login .form-title {
+  padding-top: 15vh;
+}
+@media screen and (max-width: 992px) {
+  .connect-signup-login .form-title {
+    padding-top: 3%;
   }
 }
 

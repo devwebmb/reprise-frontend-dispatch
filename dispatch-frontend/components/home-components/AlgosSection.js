@@ -63,7 +63,6 @@ export default function AlgosSection() {
               disponible pour vous.
             </p>
           </div>
-          <div className="col-6"></div>
         </div>
       </div>
       <div className="d-flex justify-content-center">

@@ -51,6 +51,11 @@ li {
   src: url("../assets/fonts/raleway/static/Raleway-Medium.ttf");
 }
 
+@font-face {
+  font-family: "raleway600italic";
+  src: url("../assets/fonts/raleway/static/Raleway-SemiBoldItalic.ttf");
+}
+
 .roboto400 {
   font-family: "roboto400";
 }
@@ -74,6 +79,10 @@ li {
 .raleway500 {
   font-family: "raleway500";
 }
+
+.raleway600italic {
+  font-family: "raleway600italic";
+}
 //colors
 
 $white: white;
@@ -82,7 +91,14 @@ $violet: #7d17ff;
 $black: #030f1a;
 $paleBlue: #f8fdff;
 $red: #f25c63;
+$darkRed: #fe0102;
 $paleGrey: #f8f8f8;
+$yellow: #ffc700;
+$blueLink: #2400ff;
+
+.background-yellow {
+  background: $yellow;
+}
 
 .background-palegrey {
   background: $paleGrey;
@@ -90,6 +106,14 @@ $paleGrey: #f8f8f8;
 
 .background-paleblue {
   background: $paleBlue;
+}
+
+.dark-red {
+  color: #fe0102 ;
+}
+
+.blue-link {
+  color: $blueLink;
 }
 
 .red {
@@ -134,4 +158,8 @@ a {
 
 .cover {
   object-fit: cover;
+}
+
+.zindex5 {
+  z-index: 5;
 }
