@@ -136,6 +136,10 @@ $blueLink: #2400ff;
   color: $violet;
 }
 
+.yellow {
+  color: $yellow;
+}
+
 .background-violet {
   background: $violet;
   transition: 0.3s;
@@ -160,6 +164,14 @@ a {
   object-fit: cover;
 }
 
+.zindex-1 {
+  z-index: -1;
+}
+
 .zindex5 {
   z-index: 5;
+}
+
+.radius20 {
+  border-radius: 20px;
 }

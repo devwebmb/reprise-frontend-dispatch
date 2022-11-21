@@ -1,11 +1,11 @@
 import React from 'react'
-import PrincipalNavbar from '../../../components/navbar/PrincipalNavbar'
-import FreelanceSignupLogin from '../../../components/freelance/FreelanceSignupLogin'
+import FreelanceSignup from '../../../components/freelance/FreelanceSignup'
+import FreelanceLogin from '../../../components/freelance/FreelanceLogin'
 
 export default function index() {
   return (
       <div>
-      <FreelanceSignupLogin />
+      <FreelanceSignup />
     </div>
   )
 }

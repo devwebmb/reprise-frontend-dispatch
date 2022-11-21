@@ -1,10 +1,10 @@
 import React from 'react'
-import ClientSignupLogin from '../../../components/client/ClientSignupLogin'
-
+import ClientSignup from '../../../components/client/ClientSignup'
+import ClientLogin from '../../../components/client/ClientLogin'
 export default function index() {
   return (
-      <div>
-          <ClientSignupLogin />
+    <div>
+      <ClientSignup />
     </div>
   )
 }

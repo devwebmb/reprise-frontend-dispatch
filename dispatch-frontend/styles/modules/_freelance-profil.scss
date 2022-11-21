@@ -1,0 +1,26 @@
+.freelance-profil-header {
+
+  .header-content {
+    border-radius: 25px;
+    margin-top: 3%;
+  }
+
+  @media screen and (min-width:1800px) {
+    max-height: 700px;
+    overflow: hidden;
+
+    .header-content {
+        margin-bottom: 3%;
+    }
+  }
+}
+
+.freelance-profil-navbar {
+  font-size: 23px;
+  height: 100px;
+  background: linear-gradient(
+    267.92deg,
+    #7d17ff 1.89%,
+    rgba(100, 201, 255, 0.95) 154.62%
+  );
+}

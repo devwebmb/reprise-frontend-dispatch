@@ -113,6 +113,10 @@ li {
   color: #7d17ff;
 }
 
+.yellow {
+  color: #ffc700;
+}
+
 .background-violet {
   background: #7d17ff;
   transition: 0.3s;
@@ -135,8 +139,16 @@ a {
   object-fit: cover;
 }
 
+.zindex-1 {
+  z-index: -1;
+}
+
 .zindex5 {
   z-index: 5;
+}
+
+.radius20 {
+  border-radius: 20px;
 }
 
 .principal-navbar {
@@ -286,6 +298,26 @@ a {
   .connect-signup-login .form-title {
     padding-top: 3%;
   }
+}
+
+.freelance-profil-header .header-content {
+  border-radius: 25px;
+  margin-top: 3%;
+}
+@media screen and (min-width: 1800px) {
+  .freelance-profil-header {
+    max-height: 700px;
+    overflow: hidden;
+  }
+  .freelance-profil-header .header-content {
+    margin-bottom: 3%;
+  }
+}
+
+.freelance-profil-navbar {
+  font-size: 23px;
+  height: 100px;
+  background: linear-gradient(267.92deg, #7d17ff 1.89%, rgba(100, 201, 255, 0.95) 154.62%);
 }
 
 /*# sourceMappingURL=style.css.map */

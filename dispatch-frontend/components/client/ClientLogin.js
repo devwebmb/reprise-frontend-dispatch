@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/icons/Logo_Dispatch.svg";
-import PhotoBg from "../../public/images/loginsignup/client-bg.jpg"
+import PhotoBg from "../../public/images/loginsignup/client-bg.jpg";
 import inscriptionIcon from "../../public/icons/Icone-Inscription.svg";
 import connexionIcon from "../../public/icons/Icone-connexion.svg";
 import WhiteArrow from "../../public/icons/white-arrow.svg";
 
-export default function ClientSignupLogin() {
+export default function ClientLogin() {
   return (
     <div className="connect-signup-login d-flex ">
       <div className="col-xl-7 col-6 position-relative d-none d-lg-block">
@@ -71,7 +71,7 @@ export default function ClientSignupLogin() {
             <Image src={WhiteArrow} width={20} />
           </button>
         </div>
-        {/* <form className="col-md-8 col-10 mx-auto row g-4 mt-5">
+        <form className="col-md-8 col-10 mx-auto row g-4 mt-5">
           <div className="">
             <label className="form-label white fs-5 roboto700">
               Adresse Email <span className="dark-red">*</span>
@@ -103,76 +103,8 @@ export default function ClientSignupLogin() {
           <button className="border-0 background-yellow raleway700 white fw-bold fs-6 py-3 px-4 rounded-pill col-4 mx-auto  mt-5">
             <span>Se connecter</span>
           </button>
-        </form> */}
-        <form className="col-md-8 col-10 mx-auto row g-4 mt-5">
-          <div className="col-xl-6">
-            <label className="form-label white fs-5 roboto700">
-              Nom <span className="dark-red">*</span>
-            </label>
-            <br />
-            <input
-              type="text"
-              className="from-control px-3 py-2 rounded border-0 w-100"
-              placeholder="Nom"
-            />
-          </div>
-          <div className="col-xl-6">
-            <label className="form-label white fs-5 roboto700">
-              Prénom <span className="dark-red">*</span>
-            </label>
-            <br />
-            <input
-              type="text"
-              className="from-control  px-3 py-2 rounded border-0 w-100"
-              placeholder="Prénom"
-            />
-          </div>
-          <div className="">
-            <label className="form-label white fs-5 roboto700">
-              Adresse Email <span className="dark-red">*</span>
-            </label>
-            <br />
-            <input
-              type="email"
-              className="from-control px-3 py-2 rounded border-0 w-100"
-              placeholder="email@email.com"
-            />
-          </div>
-          <div className="">
-            <label className="form-label white fs-5 roboto700">
-              Mot de passe <span className="dark-red">*</span>
-            </label>
-            <br />
-            <input
-              type="password"
-              className="from-control  px-3 py-2 rounded border-0 w-100"
-              placeholder="Mot de passe"
-            />
-          </div>
-          <div>
-            <input type="checkbox" className="form-check-input" />
-            <label className="form-check-label roboto700 ps-3 white">
-              J’accepte les&nbsp;
-              <br className="d-sm-none" />
-              <span className="text-decoration-underline blue-link">
-                <a target="_blank" href="/">
-                  termes et conditions générales
-                </a>
-              </span>
-            </label>
-          </div>
-          <div className="mt-1">
-            <input type="checkbox" className="form-check-input" />
-
-            <label className="form-check-label roboto700 ps-3 white">
-              Tenez moi au courrant <br className="d-md-none" /> des dernières
-              offres et actualités
-            </label>
-          </div>
-          <button className="border-0 background-yellow raleway700 white fw-bold fs-6 py-3 px-4 rounded-pill col-4 mx-auto  mt-5">
-            <span>S'inscrire</span>
-          </button>
         </form>
+      
       </div>
     </div>
   );
