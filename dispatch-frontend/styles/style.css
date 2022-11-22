@@ -73,6 +73,18 @@ li {
   font-family: "raleway600italic";
 }
 
+.background-paleviolet {
+  background: #9e76fe;
+}
+
+.background-palepink {
+  background: #f6edff;
+}
+
+.background-palegreen {
+  background: #d6f2f4;
+}
+
 .background-yellow {
   background: #ffc700;
 }
@@ -83,6 +95,28 @@ li {
 
 .background-paleblue {
   background: #f8fdff;
+}
+
+.background-button-green {
+  background: #00daa7;
+}
+
+.background-violet {
+  background: #7d17ff;
+  transition: 0.3s;
+}
+
+.background-white {
+  background: white;
+}
+
+.background-transparent {
+  background: transparent;
+  transition: 0.3s;
+}
+
+.background-blue {
+  background: #0085ff;
 }
 
 .dark-red {
@@ -117,20 +151,6 @@ li {
   color: #ffc700;
 }
 
-.background-violet {
-  background: #7d17ff;
-  transition: 0.3s;
-}
-
-.background-white {
-  background: white;
-}
-
-.background-transparent {
-  background: transparent;
-  transition: 0.3s;
-}
-
 a {
   text-decoration: none;
 }
@@ -149,6 +169,18 @@ a {
 
 .radius20 {
   border-radius: 20px;
+}
+
+.radius25 {
+  border-radius: 25px;
+}
+
+.radius25-top {
+  border-radius: 25px 25px 0 0;
+}
+
+.radius25-bottom {
+  border-radius: 0 0 25px 25px;
 }
 
 .principal-navbar {
@@ -301,16 +333,30 @@ a {
 }
 
 .freelance-profil-header .header-content {
-  border-radius: 25px;
   margin-top: 3%;
+  margin-bottom: 50px;
+}
+.freelance-profil-header .header-content .disponibility-circle {
+  width: 15px;
+  height: 15px;
 }
 @media screen and (min-width: 1800px) {
-  .freelance-profil-header {
-    max-height: 700px;
-    overflow: hidden;
-  }
   .freelance-profil-header .header-content {
-    margin-bottom: 3%;
+    width: 1200px;
+  }
+  .freelance-profil-header .header-content .profil-img-container {
+    width: 220px;
+  }
+}
+.freelance-profil-header .bg-img {
+  height: calc(100% + 50px);
+}
+@media screen and (max-width: 1200px) {
+  .freelance-profil-header {
+    margin-bottom: 25px;
+  }
+  .freelance-profil-header .bg-img {
+    height: calc(100% + 50px);
   }
 }
 
@@ -318,6 +364,13 @@ a {
   font-size: 23px;
   height: 100px;
   background: linear-gradient(267.92deg, #7d17ff 1.89%, rgba(100, 201, 255, 0.95) 154.62%);
+}
+
+.freelance-profil-content hr {
+  height: 20px;
+}
+.freelance-profil-content .add-btn {
+  transform: translateY(-100%);
 }
 
 /*# sourceMappingURL=style.css.map */

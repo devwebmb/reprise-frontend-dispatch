@@ -95,6 +95,22 @@ $darkRed: #fe0102;
 $paleGrey: #f8f8f8;
 $yellow: #ffc700;
 $blueLink: #2400ff;
+$paleGreen: #d6f2f4;
+$buttonGreen: #00daa7;
+$palePink: #f6edff;
+$paleviolet: #9e76fe;
+
+.background-paleviolet {
+  background: $paleviolet;
+}
+
+.background-palepink {
+  background: $palePink;
+}
+
+.background-palegreen {
+  background: $paleGreen;
+}
 
 .background-yellow {
   background: $yellow;
@@ -108,8 +124,30 @@ $blueLink: #2400ff;
   background: $paleBlue;
 }
 
+.background-button-green {
+  background: $buttonGreen;
+}
+
+.background-violet {
+  background: $violet;
+  transition: 0.3s;
+}
+
+.background-white {
+  background: $white;
+}
+
+.background-transparent {
+  background: transparent;
+  transition: 0.3s;
+}
+
+.background-blue {
+  background: $blue;
+}
+
 .dark-red {
-  color: #fe0102 ;
+  color: #fe0102;
 }
 
 .blue-link {
@@ -140,20 +178,6 @@ $blueLink: #2400ff;
   color: $yellow;
 }
 
-.background-violet {
-  background: $violet;
-  transition: 0.3s;
-}
-
-.background-white {
-  background: $white;
-}
-
-.background-transparent {
-  background: transparent;
-  transition: 0.3s;
-}
-
 //général
 
 a {
@@ -174,4 +198,16 @@ a {
 
 .radius20 {
   border-radius: 20px;
+}
+
+.radius25 {
+  border-radius: 25px;
+}
+
+.radius25-top {
+  border-radius: 25px 25px 0 0;
+}
+
+.radius25-bottom {
+  border-radius: 0 0 25px 25px;
 }

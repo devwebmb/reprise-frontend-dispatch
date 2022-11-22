@@ -10,18 +10,33 @@ import FreelanceProfilnavbar from "../../navbar/FreelanceProfilnavbar";
 export default function Header() {
   return (
     <div className="freelance-profil-header position-relative ">
-      <div className="w-100 position-absolute zindex-1">
+      <div className="w-100 bg-img  position-absolute zindex-1">
         <Image
           src={BgImg}
           layout="responsive"
-                  alt="background du header profil freelance "
-                  objectFit="cover"
+          alt="background du header profil freelance "
+          className="h-100 "
         />
       </div>
       <FreelanceProfilnavbar />
-      <div className="col-9 mx-auto header-content background-white d-flex py-4 ">
-        <div className="col-3"></div>
-        <div className="col-4 d-flex flex-column text-center py-5 px-3 ">
+      <div className="col-10 col-xl-9 mx-auto header-content radius25 background-white d-flex py-4 justify-content-evenly flex-column flex-sm-row">
+        <div className="  p-3 d-none d-xl-block ">
+          <button className="background-palegreen rounded-pill p-2 px-3  d-flex align-items-center border-0">
+            <div className="disponibility-circle background-button-green rounded-circle "></div>
+            <span className="ps-2 roboto500 black">
+              disponible à temps plein
+            </span>
+          </button>
+        </div>
+        <div className="  d-flex flex-column text-center py-xl-5 py-3 px-3 ">
+          <div className="  pb-3 d-flex d-xl-none justify-content-center">
+            <button className="background-palegreen rounded-pill p-2 px-3  d-flex align-items-center border-0">
+              <div className="disponibility-circle background-button-green rounded-circle "></div>
+              <span className="ps-2 roboto500 black">
+                disponible à temps plein
+              </span>
+            </button>
+          </div>
           <h1 className="roboto700 black">PRENOM NOM</h1>
           <span className="roboto500 black fs-4 mb-2">Métier - métier</span>
           <div className="d-flex justify-content-center">
@@ -41,8 +56,8 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="col-3 py-3 px-3">
-          <div className="col-10  mx-auto h-100 position-relative">
+        <div className="col-xl-3 col-5  py-3 px-xl-3 ">
+          <div className="col-10 profil-img-container mx-auto h-100 position-relative d-none d-sm-block">
             <Image
               src={TestPhotoProfil}
               layout="fill"
@@ -50,6 +65,13 @@ export default function Header() {
               className="radius20 "
             />
           </div>
+        </div>
+        <div className="d-block d-sm-none col-7 mx-auto">
+          <Image
+            src={TestPhotoProfil}
+            layout="responsive"
+            className="radius20 "
+          />
         </div>
       </div>
     </div>
