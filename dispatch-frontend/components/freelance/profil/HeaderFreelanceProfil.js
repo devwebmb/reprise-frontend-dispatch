@@ -6,6 +6,7 @@ import GreyStar from "../../../public/icons/icon-grey-star.svg";
 import RedStar from "../../../public/icons/icon-red-star.svg";
 import TestPhotoProfil from "../../../public/images/freelanceProfil/bald-eagle-gfd45b1323_1920.jpg";
 import FreelanceProfilnavbar from "../../navbar/FreelanceProfilnavbar";
+import DownloadArrow from "../../../public/icons/telecharger-arrow.png";
 
 export default function Header() {
   return (
@@ -57,21 +58,34 @@ export default function Header() {
           </div>
         </div>
         <div className="col-xl-3 col-5  py-3 px-xl-3 ">
-          <div className="col-10 profil-img-container mx-auto h-100 position-relative d-none d-sm-block">
-            <Image
+          <div className="col-10 profil-img-container mx-auto h-100 position-relative d-none d-sm-block border radius20  p-2">
+            <button className="rounded-pill background-paleviolet col-10  border-0 px-3 position-absolute top-50 start-50 translate-middle">
+              <span className=" white raleway700">
+                + Ajouter une photo <br />
+                &nbsp;de profil
+              </span>
+            </button>
+            {/* <Image
               src={TestPhotoProfil}
               layout="fill"
               objectFit="cover"
               className="radius20 "
-            />
+            /> */}
           </div>
         </div>
         <div className="d-block d-sm-none col-7 mx-auto">
-          <Image
+          {" "}
+          <button className="rounded-pill background-paleviolet col-12 mx-auto border-0 px-3 ">
+            <span className=" white raleway700">
+              + Ajouter une photo <br />
+              &nbsp;de profil
+            </span>
+          </button>
+          {/* <Image
             src={TestPhotoProfil}
             layout="responsive"
             className="radius20 "
-          />
+          /> */}
         </div>
       </div>
     </div>

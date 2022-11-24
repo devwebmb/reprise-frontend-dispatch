@@ -90,7 +90,7 @@ li {
 }
 
 .background-palegrey {
-  background: #f8f8f8;
+  background: #dee2e6;
 }
 
 .background-paleblue {
@@ -117,6 +117,14 @@ li {
 
 .background-blue {
   background: #0085ff;
+}
+
+.background-pale-grey {
+  color: #dee2e6;
+}
+
+.border-color-pale-violet {
+  border-color: #9e76fe !important;
 }
 
 .dark-red {
@@ -371,6 +379,14 @@ a {
 }
 .freelance-profil-content .add-btn {
   transform: translateY(-100%);
+}
+
+.qui-sommes-nous {
+  background: linear-gradient(229.57deg, #7D17FF 29%, #64C9FF 88.38%);
+  padding: 150px 0;
+}
+.qui-sommes-nous ul li {
+  list-style-type: disc !important;
 }
 
 /*# sourceMappingURL=style.css.map */

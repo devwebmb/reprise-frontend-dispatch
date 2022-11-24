@@ -130,8 +130,8 @@ export default function Content() {
         </div>
       </div>
 
-      <div className=" py-5 ">
-        <div className="shadow col-xl-10 col-11 mx-auto radius25">
+      <div className=" py-5">
+        <div className="shadow col-xl-10 col-11 mx-auto radius25  background-white">
           <div className="text-center  background-paleviolet raleway700 white py-3 radius25-top fs-5">
             Mes expériences
           </div>{" "}
@@ -154,6 +154,11 @@ export default function Content() {
               </div>
             </div>
             <hr className="m-0 p-0" />
+          </div>
+          <div className="d-flex justify-content-end  px-4  pb-4">
+            <button className="rounded-pill background-paleviolet  border-0 px-3 ">
+              <span className="ps-2 white raleway700">+ Ajouter</span>
+            </button>
           </div>
         </div>
       </div>

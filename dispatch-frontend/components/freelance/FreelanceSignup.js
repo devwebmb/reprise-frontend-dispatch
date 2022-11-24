@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoBg from "../../public/images/loginsignup/freelance-bg.jpg";
@@ -7,7 +7,16 @@ import logo from "../../public/icons/Logo_Dispatch.svg";
 import inscriptionIcon from "../../public/icons/Icone-Inscription.svg";
 import connexionIcon from "../../public/icons/Icone-connexion.svg";
 
+import FreelanceInfosSignup from "./FreelanceInfosSignup";
+import FreelanceSignupFirstPart from "./FreelanceSignupFirstPart";
+
 export default function FreelanceSignup() {
+  const [displayPart2, setDisplaypart2] = useState(null)
+
+  const changeDisplay = () => {
+    setDisplaypart2(!displayPart2)
+  }
+
   return (
     <div>
       <div className="connect-signup-login d-flex ">
@@ -23,7 +32,12 @@ export default function FreelanceSignup() {
             </div>
           </div>
           <div className="w-100 h-100 position-relative">
-            <Image src={PhotoBg} layout="fill" objectFit="cover" />
+            <Image
+              src={PhotoBg}
+              layout="fill"
+              objectFit="cover"
+              alt="Image de background"
+            />
           </div>
         </div>
         <div className="col-lg-7 form-part ">
@@ -56,92 +70,17 @@ export default function FreelanceSignup() {
             </div>
           </div>
           <div className="mx-auto col-8 d-flex justify-content-center d-lg-none pb-4">
-            <Image src={PhotoBg} className="w-50 h-50 " />
+            <Image
+              src={PhotoBg}
+              className="w-50 h-50 "
+              alt="Image de background"
+            />
           </div>
-          <div className="col-10 mx-auto  form-title">
-            <h1 className="roboto500 white text-center mb-5">
-              Transmettez votre passion <br className="d-none d-lg-block" /> et
-              gagnez de l’argent
-            </h1>
-            <p className="white roboto300 fs-4">
-              Avec Dispatch, nous avez le choix entre attendre un projet si
-              votre profil est séléctionné, ou parcourir les offres. Fini les
-              longues journées de recherche.
-            </p>
-            <button className="border-0 background-yellow raleway700 white fw-bold fs-6 py-1 px-3 rounded-pill home-header-btn">
-              <span className="pe-2">En savoir plus</span>
-              <Image src={WhiteArrow} width={20} />
-            </button>
-          </div>
-          <form className="col-md-8 col-10 mx-auto row g-4 mt-5">
-            <div className="col-xl-6">
-              <label className="form-label white fs-5 roboto700">
-                Nom <span className="dark-red">*</span>
-              </label>
-              <br />
-              <input
-                type="text"
-                className="from-control px-3 py-2 rounded border-0 w-100"
-                placeholder="Nom"
-              />
-            </div>
-            <div className="col-xl-6">
-              <label className="form-label white fs-5 roboto700">
-                Prénom <span className="dark-red">*</span>
-              </label>
-              <br />
-              <input
-                type="text"
-                className="from-control  px-3 py-2 rounded border-0 w-100"
-                placeholder="Prénom"
-              />
-            </div>
-            <div className="">
-              <label className="form-label white fs-5 roboto700">
-                Adresse Email <span className="dark-red">*</span>
-              </label>
-              <br />
-              <input
-                type="email"
-                className="from-control px-3 py-2 rounded border-0 w-100"
-                placeholder="email@email.com"
-              />
-            </div>
-            <div className="">
-              <label className="form-label white fs-5 roboto700">
-                Mot de passe <span className="dark-red">*</span>
-              </label>
-              <br />
-              <input
-                type="password"
-                className="from-control  px-3 py-2 rounded border-0 w-100"
-                placeholder="Mot de passe"
-              />
-            </div>
-            <div>
-              <input type="checkbox" className="form-check-input" />
-              <label className="form-check-label roboto700 ps-3 white">
-                J’accepte les&nbsp;
-                <br className="d-sm-none" />
-                <span className="text-decoration-underline blue-link">
-                  <a target="_blank" href="/">
-                    termes et conditions générales
-                  </a>
-                </span>
-              </label>
-            </div>
-            <div className="mt-1">
-              <input type="checkbox" className="form-check-input" />
-
-              <label className="form-check-label roboto700 ps-3 white">
-                Tenez moi au courrant <br className="d-md-none" /> des dernières
-                offres et actualités
-              </label>
-            </div>
-            <button className="border-0 background-yellow raleway700 white fw-bold fs-6 py-3 px-4 rounded-pill col-4 mx-auto  mt-5">
-              <span>S'inscrire</span>
-            </button>
-          </form>
+          {displayPart2 ? (
+            <FreelanceInfosSignup />
+          ) : (
+            <FreelanceSignupFirstPart function={changeDisplay} />
+          )}
         </div>
       </div>
     </div>

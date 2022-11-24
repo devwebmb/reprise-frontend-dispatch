@@ -99,6 +99,7 @@ $paleGreen: #d6f2f4;
 $buttonGreen: #00daa7;
 $palePink: #f6edff;
 $paleviolet: #9e76fe;
+$paleGrey: #dee2e6;
 
 .background-paleviolet {
   background: $paleviolet;
@@ -144,6 +145,14 @@ $paleviolet: #9e76fe;
 
 .background-blue {
   background: $blue;
+}
+
+.background-pale-grey {
+  color: $paleGrey;
+}
+
+.border-color-pale-violet {
+  border-color: $paleviolet !important;
 }
 
 .dark-red {
