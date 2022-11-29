@@ -56,6 +56,11 @@ li {
   src: url("../assets/fonts/raleway/static/Raleway-SemiBoldItalic.ttf");
 }
 
+@font-face {
+  font-family: "raleway400";
+  src: url("../assets/fonts/raleway/static/Raleway-Regular.ttf");
+}
+
 .roboto400 {
   font-family: "roboto400";
 }
@@ -76,6 +81,10 @@ li {
   font-family: "raleway700";
 }
 
+.raleway400 {
+  font-family: "raleway400";
+}
+
 .raleway500 {
   font-family: "raleway500";
 }
@@ -94,6 +103,7 @@ $red: #f25c63;
 $darkRed: #fe0102;
 $paleGrey: #f8f8f8;
 $yellow: #ffc700;
+$grey: #d9d9d9;
 $blueLink: #2400ff;
 $paleGreen: #d6f2f4;
 $buttonGreen: #00daa7;
@@ -149,6 +159,10 @@ $paleGrey: #dee2e6;
 
 .background-pale-grey {
   color: $paleGrey;
+}
+
+.background-grey {
+  background: $grey;
 }
 
 .border-color-pale-violet {

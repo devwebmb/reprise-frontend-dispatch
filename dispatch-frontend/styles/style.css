@@ -45,6 +45,10 @@ li {
   font-family: "raleway600italic";
   src: url("../assets/fonts/raleway/static/Raleway-SemiBoldItalic.ttf");
 }
+@font-face {
+  font-family: "raleway400";
+  src: url("../assets/fonts/raleway/static/Raleway-Regular.ttf");
+}
 .roboto400 {
   font-family: "roboto400";
 }
@@ -63,6 +67,10 @@ li {
 
 .raleway700 {
   font-family: "raleway700";
+}
+
+.raleway400 {
+  font-family: "raleway400";
 }
 
 .raleway500 {
@@ -121,6 +129,10 @@ li {
 
 .background-pale-grey {
   color: #dee2e6;
+}
+
+.background-grey {
+  background: #d9d9d9;
 }
 
 .border-color-pale-violet {
@@ -383,10 +395,24 @@ a {
 
 .qui-sommes-nous {
   background: linear-gradient(229.57deg, #7D17FF 29%, #64C9FF 88.38%);
-  padding: 150px 0;
+}
+.qui-sommes-nous .content {
+  margin-top: -100px;
+  padding: 150px 0 100px 0;
 }
 .qui-sommes-nous ul li {
   list-style-type: disc !important;
+}
+
+.abonnements-freelance {
+  background: linear-gradient(229.57deg, #7d17ff 29%, #64c9ff 88.38%);
+}
+.abonnements-freelance .content {
+  margin-top: -100px;
+  padding: 150px 0 100px 0;
+}
+.abonnements-freelance .content .btn-abonnements {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
