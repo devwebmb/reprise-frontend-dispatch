@@ -110,6 +110,11 @@ $buttonGreen: #00daa7;
 $palePink: #f6edff;
 $paleviolet: #9e76fe;
 $paleGrey: #dee2e6;
+$pink: #e0c3fc;
+
+.background-pink {
+  background: $pink;
+}
 
 .background-paleviolet {
   background: $paleviolet;
@@ -214,9 +219,19 @@ a {
 .zindex-1 {
   z-index: -1;
 }
+.zindex-2 {
+  z-index: -2;
+}
 
 .zindex5 {
   z-index: 5;
+}
+.zindex1 {
+  z-index: 1;
+}
+
+.zindex10 {
+  z-index: 10;
 }
 
 .radius20 {
@@ -234,3 +249,5 @@ a {
 .radius25-bottom {
   border-radius: 0 0 25px 25px;
 }
+
+

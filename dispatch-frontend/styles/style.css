@@ -81,6 +81,10 @@ li {
   font-family: "raleway600italic";
 }
 
+.background-pink {
+  background: #e0c3fc;
+}
+
 .background-paleviolet {
   background: #9e76fe;
 }
@@ -183,8 +187,20 @@ a {
   z-index: -1;
 }
 
+.zindex-2 {
+  z-index: -2;
+}
+
 .zindex5 {
   z-index: 5;
+}
+
+.zindex1 {
+  z-index: 1;
+}
+
+.zindex10 {
+  z-index: 10;
 }
 
 .radius20 {
@@ -352,31 +368,16 @@ a {
   }
 }
 
-.freelance-profil-header .header-content {
-  margin-top: 3%;
-  margin-bottom: 50px;
-}
 .freelance-profil-header .header-content .disponibility-circle {
   width: 15px;
   height: 15px;
 }
 @media screen and (min-width: 1800px) {
   .freelance-profil-header .header-content {
-    width: 1200px;
+    width: 1600px;
   }
   .freelance-profil-header .header-content .profil-img-container {
     width: 220px;
-  }
-}
-.freelance-profil-header .bg-img {
-  height: calc(100% + 50px);
-}
-@media screen and (max-width: 1200px) {
-  .freelance-profil-header {
-    margin-bottom: 25px;
-  }
-  .freelance-profil-header .bg-img {
-    height: calc(100% + 50px);
   }
 }
 
@@ -413,6 +414,14 @@ a {
 }
 .abonnements-freelance .content .btn-abonnements {
   font-size: 14px;
+}
+
+.mentions-legales {
+  background: linear-gradient(229.57deg, #7d17ff 29%, #64c9ff 88.38%);
+}
+.mentions-legales .content {
+  margin-top: -100px;
+  padding: 150px 0 100px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

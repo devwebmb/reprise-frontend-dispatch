@@ -6,7 +6,7 @@ import AccountIcon from "../../public/icons/account-icon.svg";
 
 export default function FreelanceProfilnavbar() {
   return (
-    <div className="freelance-profil-navbar d-flex">
+    <div className="freelance-profil-navbar d-flex sticky-top">
       <div className=" col-3 col-sm-6 d-flex h-100 ">
         <div className="logo-container d-flex align-items-center justify-content-center  pe-3 ps-5  h-100">
           <Image src={logo} alt="logo dispatch" />
