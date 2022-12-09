@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoBg from "../../public/images/loginsignup/freelance-bg.jpg";
@@ -7,15 +7,9 @@ import logo from "../../public/icons/Logo_Dispatch.svg";
 import inscriptionIcon from "../../public/icons/Icone-Inscription.svg";
 import connexionIcon from "../../public/icons/Icone-connexion.svg";
 
-import FreelanceInfosSignup from "./FreelanceInfosSignup";
 import FreelanceSignupFirstPart from "./FreelanceSignupFirstPart";
 
 export default function FreelanceSignup() {
-  const [displayPart2, setDisplaypart2] = useState(null)
-
-  const changeDisplay = () => {
-    setDisplaypart2(!displayPart2)
-  }
 
   return (
     <div>
@@ -76,11 +70,9 @@ export default function FreelanceSignup() {
               alt="Image de background"
             />
           </div>
-          {displayPart2 ? (
-            <FreelanceInfosSignup />
-          ) : (
-            <FreelanceSignupFirstPart function={changeDisplay} />
-          )}
+
+            <FreelanceSignupFirstPart />
+   
         </div>
       </div>
     </div>

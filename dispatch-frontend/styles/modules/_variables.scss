@@ -101,6 +101,7 @@ $black: #030f1a;
 $paleBlue: #f8fdff;
 $red: #f25c63;
 $darkRed: #fe0102;
+$redDanger: #dc3545;
 $paleGrey: #f8f8f8;
 $yellow: #ffc700;
 $grey: #d9d9d9;
@@ -175,7 +176,11 @@ $pink: #e0c3fc;
 }
 
 .dark-red {
-  color: #fe0102;
+  color: $darkRed;
+}
+
+.danger-red {
+  color: $redDanger;
 }
 
 .blue-link {

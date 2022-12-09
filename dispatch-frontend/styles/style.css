@@ -143,8 +143,19 @@ li {
   border-color: #9e76fe !important;
 }
 
+.green {
+  color: green !important;
+}
+
+.red {
+  color: red !important;
+}
 .dark-red {
   color: #fe0102;
+}
+
+.danger-red {
+  color: #dc3545;
 }
 
 .blue-link {
@@ -384,7 +395,11 @@ a {
 .freelance-profil-navbar {
   font-size: 23px;
   height: 100px;
-  background: linear-gradient(267.92deg, #7d17ff 1.89%, rgba(100, 201, 255, 0.95) 154.62%);
+  background: linear-gradient(
+    267.92deg,
+    #7d17ff 1.89%,
+    rgba(100, 201, 255, 0.95) 154.62%
+  );
 }
 
 .freelance-profil-content hr {
@@ -395,7 +410,7 @@ a {
 }
 
 .qui-sommes-nous {
-  background: linear-gradient(229.57deg, #7D17FF 29%, #64C9FF 88.38%);
+  background: linear-gradient(229.57deg, #7d17ff 29%, #64c9ff 88.38%);
 }
 .qui-sommes-nous .content {
   margin-top: -100px;
