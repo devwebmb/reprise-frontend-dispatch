@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
 import Image from "next/image";
 import WhiteArrow from "../../public/icons/white-arrow.svg";
 import Eye from "../../public/icons/eye.svg";
 import EyeSlash from "../../public/icons/eye-slash.svg";
-
-import validationSchema from "../../services/validationSchemas/signupFreelanceSchema";
 
 export default function FreelanceSignupFirsPart(props) {
   const [freelanceData, setFreelanceData] = useState({
     lastname: "",
     firstname: "",
     email: "",
-    job: "",
-    presentation: "",
   });
 
   const [displayPart2, setDisplaypart2] = useState(null);
@@ -30,16 +25,31 @@ export default function FreelanceSignupFirsPart(props) {
     handleSubmit,
     formState,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(validationSchema) });
+  } = useForm({ defaultValues: { validationCheck: false } });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const nextform = (data) => {
     setFreelanceData({
       lastname: data.lastname,
       firstname: data.firstname,
       email: data.email,
     });
     setDisplaypart2(!displayPart2);
+  };
+
+  const onSubmit = (data) => {
+    axios
+      .post(`http://localhost:3060/api/freelance/signup`, {
+        email: freelanceData.email,
+        password: password,
+        lastname: freelanceData.lastname,
+        firstname: freelanceData.firstname,
+        job: data.job,
+        presentation: data.presentation,
+        createdAt: new Date(),
+      })
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   /*validation password*/
@@ -82,7 +92,7 @@ export default function FreelanceSignupFirsPart(props) {
       {!displayPart2 && (
         <form
           className="col-md-8 col-10 mx-auto row g-4 mt-5"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(nextform)}
         >
           <div className="col-xl-6">
             <label className="form-label white fs-5 roboto700">
@@ -95,6 +105,11 @@ export default function FreelanceSignupFirsPart(props) {
               placeholder="Nom"
               {...register("lastname", {
                 required: "Vous devez entrer votre nom",
+                pattern: {
+                  value: /^[^<>,.;:!{}()&$ù%/[\]]+$/i,
+                  message:
+                    "Le nom de famille ne doit pas comporter de caractères spéciaux",
+                },
               })}
             />
             {errors.lastname && (
@@ -114,6 +129,11 @@ export default function FreelanceSignupFirsPart(props) {
               placeholder="Prénom"
               {...register("firstname", {
                 required: "Vous devez entrer votre prénom",
+                pattern: {
+                  value: /^[^<>,.;:!{}()&$ù%/[\]]+$/i,
+                  message:
+                    "Le prénom ne doit pas comporter de caractères spéciaux",
+                },
               })}
             />
             {errors.firstname && (
@@ -203,26 +223,34 @@ export default function FreelanceSignupFirsPart(props) {
       )}
       {/*second/part*/}
       {displayPart2 && (
-        <form className="col-md-8 col-10 mx-auto row g-4 mt-5">
+        <form
+          className="col-md-8 col-10 mx-auto row g-4 mt-5"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           {/*domaine d'activité*/}
           <div>
             <label className="form-label white fs-5 roboto700">
               Votre domaine <span className="dark-red">*</span>
             </label>
             <select
-              className="  px-3 py-2 rounded border-0 w-100 "
-              placeholder="Entrer votre métier"
+              className="  px-3 py-2 rounded border-0 w-100 is-invalid "
+              required
               onChange={(e) => {
                 setDomaine(e.target.value);
               }}
             >
               {" "}
-              <option>Choisissez votre domaine</option>
+              <option value="">Choisissez votre domaine</option>
               <option value="son">Son</option>
               <option value="image">Image</option>
               <option value="developpement">Développement, informatique</option>
               <option value="technique">Métiers de l'audiovisuel</option>
             </select>
+            {errors.domaine && (
+              <span className="invalid-feedback">
+                Vous devez choisir un domaine d'activité
+              </span>
+            )}
           </div>
           {/*métiers du son*/}
           {domaine === "son" && (
@@ -232,31 +260,38 @@ export default function FreelanceSignupFirsPart(props) {
                 Votre métier <span className="dark-red">*</span>
               </label>
               <select
-                className="  px-3 py-2 rounded border-0 w-100 "
-                placeholder="Entrer votre métier"
-                onChange={(e) => {
-                  set
-                }}
+                className="  px-3 py-2 rounded border-0 w-100 is-invalid"
+                {...register("job", {
+                  required: "veuillez choisir votre métier",
+                })}
               >
                 {" "}
-                <option>Choisissez votre métier</option>
+                <option value="">Choisissez votre métier</option>
                 <option value="ingeson">Ingénieur/Ingénieure son</option>
                 <option value="mixson">Mixeur/Mixeuse son</option>
               </select>
+              {errors.job && (
+                <span className="invalid-feedback">
+                  Vous devez choisir votre métier
+                </span>
+              )}
             </div>
           )}
           {/*métiers de l'image*/}
           {domaine === "image" && (
             <div>
               {" "}
-              <label className="form-label white fs-5 roboto700">
+              <label className="form-label white fs-5 roboto700 is-invalid">
                 Votre métier <span className="dark-red">*</span>
               </label>
               <select
                 className="  px-3 py-2 rounded border-0 w-100 "
                 placeholder="Entrer votre métier"
+                {...register("job", {
+                  required: "veuillez choisir votre métier",
+                })}
               >
-                <option>Choisissez votre métier</option>
+                <option value="">Choisissez votre métier</option>
                 <option value="anim2d3d">Animateur/Animatrice 2D 3D</option>
                 <option value="cadreur">Cadreur/Cadreuse</option>
                 <option value="chefmonteur">Chef Monteur/Chef Monteuse</option>
@@ -270,20 +305,28 @@ export default function FreelanceSignupFirsPart(props) {
                 <option value="journalisteimage">
                   Journaliste/Reporter d'Images
                 </option>
-              </select>
+              </select>{" "}
+              {errors.job && (
+                <span className="invalid-feedback">
+                  Vous devez choisir votre métier
+                </span>
+              )}
             </div>
           )}
           {/*métiers de l'informatique*/}
           {domaine === "developpement" && (
             <div>
-              <label className="form-label white fs-5 roboto700">
+              <label className="form-label white fs-5 roboto700 is-invalid">
                 Votre métier <span className="dark-red">*</span>
               </label>
               <select
                 className="  px-3 py-2 rounded border-0 w-100 "
                 placeholder="Entrer votre métier"
+                {...register("job", {
+                  required: "veuillez choisir votre métier",
+                })}
               >
-                <option>Choisissez votre métier</option>{" "}
+                <option value="">Choisissez votre métier</option>{" "}
                 <option value="chefprojetinf">Chef Projet Informatique</option>
                 <option value="formateurinf">
                   Consultant Formateur en Informatique
@@ -303,21 +346,29 @@ export default function FreelanceSignupFirsPart(props) {
                   Tecnicien/Tecnicienne Informatique
                 </option>
               </select>
+              {errors.job && (
+                <span className="invalid-feedback">
+                  Vous devez choisir votre métier
+                </span>
+              )}
             </div>
           )}
           {/*métiers de l'audiovisuel*/}
           {domaine === "technique" && (
             <div>
               {" "}
-              <label className="form-label white fs-5 roboto700">
+              <label className="form-label white fs-5 roboto700 is-invalid">
                 Votre métier <span className="dark-red">*</span>
               </label>
               <select
                 className="  px-3 py-2 rounded border-0 w-100 "
                 placeholder="Entrer votre métier"
+                {...register("job", {
+                  required: "veuillez choisir votre métier",
+                })}
               >
                 {" "}
-                <option>Choisissez votre métier</option>
+                <option value="">Choisissez votre métier</option>
                 <option value="animateurtv">
                   Animateur/Animatrice de Radio et de télévision
                 </option>
@@ -333,6 +384,11 @@ export default function FreelanceSignupFirsPart(props) {
                 <option value="scenariste">Scénariste</option>
                 <option value="script">Scripte</option>
               </select>
+              {errors.job && (
+                <span className="invalid-feedback">
+                  Vous devez choisir votre métier
+                </span>
+              )}
             </div>
           )}
           {/*présentation*/}
@@ -344,12 +400,27 @@ export default function FreelanceSignupFirsPart(props) {
             <textarea
               cols="30"
               rows="10"
-              className="w-100 rounded border-0 px-3 py-2"
+              className="w-100 rounded border-0 px-3 py-2 is-invalid"
               placeholder="Dîtes nous en un peu plus sur vous. Une présentation explicite permettra aux clients de vous repérer."
+              {...register("presentation", {
+                required: "Vous devez entrer votre présentation",
+              })}
             ></textarea>
+            {errors.presentation && (
+              <span className="invalid-feedback">
+                {errors.presentation.message}
+              </span>
+            )}
           </div>{" "}
+          {/*checkboxes*/}
           <div>
-            <input type="checkbox" className="form-check-input" />
+            <input
+              type="checkbox"
+              className="form-check-input is-invalid "
+              {...register("validationCheck", {
+                validate: (value) => value === true,
+              })}
+            />
             <label className="form-check-label roboto700 ps-3 white">
               J’accepte les&nbsp;
               <br className="d-sm-none" />
@@ -358,7 +429,12 @@ export default function FreelanceSignupFirsPart(props) {
                   termes et conditions générales
                 </a>
               </span>
-            </label>
+            </label>{" "}
+            {errors.validationCheck && (
+              <span className="invalid-feedback">
+                Vous devez valider les termes et conditions générales
+              </span>
+            )}
           </div>
           <div className="mt-1">
             <input type="checkbox" className="form-check-input" />

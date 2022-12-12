@@ -7,7 +7,7 @@ import logo from "../../public/icons/Logo_Dispatch.svg";
 import inscriptionIcon from "../../public/icons/Icone-Inscription.svg";
 import connexionIcon from "../../public/icons/Icone-connexion.svg";
 
-import FreelanceSignupFirstPart from "./FreelanceSignupFirstPart";
+import FreelanceSignupForm from "./FreelanceSignupForm";
 
 export default function FreelanceSignup() {
 
@@ -71,7 +71,7 @@ export default function FreelanceSignup() {
             />
           </div>
 
-            <FreelanceSignupFirstPart />
+            <FreelanceSignupForm />
    
         </div>
       </div>
