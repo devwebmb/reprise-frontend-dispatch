@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import WhiteArrow from "../../public/icons/white-arrow.svg";
 import Eye from "../../public/icons/eye.svg";
@@ -12,6 +15,9 @@ export default function FreelanceSignupFirsPart(props) {
     firstname: "",
     email: "",
   });
+
+  const router = useRouter();
+  const MySwal = withReactContent(Swal);
 
   const [displayPart2, setDisplaypart2] = useState(null);
 
@@ -38,7 +44,7 @@ export default function FreelanceSignupFirsPart(props) {
 
   const onSubmit = (data) => {
     axios
-      .post(`http://localhost:3060/api/freelance/signup`, {
+      .post(`${process.env.url}/api/freelance/signup`, {
         email: freelanceData.email,
         password: password,
         lastname: freelanceData.lastname,
@@ -49,6 +55,24 @@ export default function FreelanceSignupFirsPart(props) {
       })
       .then((data) => {
         console.log(data);
+        MySwal.fire({
+          title: <p>Félicitations !</p>,
+          text: "Vous êtes maintenant inscrit comme freelance sur la plateforme, veuillez maintenant vous connecter.",
+        });
+        router.push("/freelance/connect/login");
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+        MySwal.fire({
+          title: <p>Adresse email indisponible</p>,
+          text: error.response.data.message,
+          showCloseButton: true,
+          confirmButtonText: `
+              <a href="/freelance/connect/login">
+                <span className="white">Se connecter</span>
+              </a>
+          `,
+        });
       });
   };
 

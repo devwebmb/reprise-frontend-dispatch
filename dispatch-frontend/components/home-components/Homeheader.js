@@ -29,7 +29,7 @@ export default function () {
               <Image src={BlueArrow} width={20} alt="Icone d'une flèche" />
             </button>
           </Link>
-          <Link href="/freelance/connect" className="col-6 col-md-4 col-lg-3 col-xl-2 ">
+          <Link href="/freelance/connect/signup" className="col-6 col-md-4 col-lg-3 col-xl-2 ">
             <button className="border-0 background-violet raleway700 white fw-bold fs-6 py-3 px-4 rounded-pill home-header-btn">
               <span className="pe-2"> Je suis freelance</span>
               <Image src={WhiteArrow} width={20} alt="Icone d'une flèche" />
